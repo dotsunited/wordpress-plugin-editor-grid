@@ -17,9 +17,6 @@
         "composer/installers": "~1.0"
     },
     "extra": {
-        "installer-name": "dotsunited-wordpress-plugin-editor-grid",
-        "branch-alias": {
-            "dev-master": "1.x-dev"
-        }
+        "installer-name": "dotsunited-wordpress-plugin-editor-grid"
     }
 }
