@@ -13,8 +13,6 @@
         var units = [6, 6];
         var numChildren = children.length;
 
-        console.log(numChildren)
-
         if (!numChildren) {
             contents.push(selectedContent);
         } else {
@@ -57,7 +55,7 @@
         }
 
         // Insert
-        var content, insert = $('<div class="grid-container grid-container-' + units.join('-') + '"/>');
+        var content, insert = $('<div class="grid-container"/>');
 
         for (var i = 0, l = units.length - 1; i < l; i++) {
             content = '';
