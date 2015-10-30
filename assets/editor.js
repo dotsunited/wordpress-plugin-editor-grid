@@ -392,7 +392,7 @@
                 node = selection.getNode();
                 wrap = dom.getParent(node, '.grid-unit');
 
-                if (!wrap) {
+                if (!wrap || node.nodeName === 'P') {
                     return;
                 }
 
@@ -401,11 +401,7 @@
                 spacer = tinymce.Env.ie && tinymce.Env.ie < 11 ? '' : '<br data-mce-bogus="1" />';
                 P = dom.create('p', null, spacer);
 
-                if (node.nodeName === 'P') {
-                    dom.insertAfter(P, node);
-                } else {
-                    dom.add(wrap, P);
-                }
+                dom.add(wrap, P);
 
                 editor.nodeChanged();
                 selection.setCursorLocation(P, 0);
