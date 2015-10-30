@@ -77,6 +77,7 @@
 
     border: 1px dotted #ccc;
     margin-bottom: 10px;
+    position: relative;
 }
 
 [class*=grid-unit] :first-child {
@@ -94,39 +95,94 @@
     height: auto;
 }
 
+[class*=grid-unit]:before {
+    font-size: 11px;
+    color: #ccc;
+    position: absolute;
+    top: -3px;
+    right: 1px;
+}
+
 .grid-unit-12 {
     width: 98%;
 }
+.grid-unit-12:before {
+    content: '12 / 12'
+}
+
 .grid-unit-11 {
     width: 89.66666667%;
 }
+.grid-unit-11:before {
+    content: '11 / 12'
+}
+
 .grid-unit-10 {
     width: 81.33333333%;
 }
+.grid-unit-10:before {
+    content: '10 / 12'
+}
+
 .grid-unit-9 {
     width: 73%;
 }
+.grid-unit-9:before {
+    content: '9 / 12'
+}
+
 .grid-unit-8 {
     width: 64.66666667%;
 }
+.grid-unit-8:before {
+    content: '8 / 12'
+}
+
 .grid-unit-7 {
     width: 56.33333333%;
 }
+.grid-unit-7:before {
+    content: '7 / 12'
+}
+
 .grid-unit-6 {
     width: 48%;
 }
+.grid-unit-6:before {
+    content: '6 / 12'
+}
+
 .grid-unit-5 {
     width: 39.66666667%;
 }
+.grid-unit-5:before {
+    content: '5 / 12'
+}
+
 .grid-unit-4 {
     width: 31.33333333%;
 }
+.grid-unit-4:before {
+    content: '4 / 12'
+}
+
 .grid-unit-3 {
     width: 23%;
 }
+.grid-unit-3:before {
+    content: '3 / 12'
+}
+
 .grid-unit-2 {
     width: 14.66666667%;
 }
+.grid-unit-2:before {
+    content: '2 / 12'
+}
+
 .grid-unit-1 {
     width: 6.33333333%;
+}
+.grid-unit-1:before {
+    content: '1 / 12'
 }
