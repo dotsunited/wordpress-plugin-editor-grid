@@ -392,7 +392,7 @@
                 node = selection.getNode();
                 wrap = dom.getParent(node, '.grid-unit');
 
-                if (!wrap || node.nodeName === 'P') {
+                if (!wrap) {
                     return;
                 }
 
