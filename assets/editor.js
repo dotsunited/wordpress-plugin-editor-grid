@@ -210,7 +210,7 @@
 
             return {
                 type: 'listbox',
-                text: 'Unit size',
+                text: 'Column size',
                 classes: 'btn widget fixed-width',
                 icon: false,
                 onselect: function(e) {},
@@ -246,7 +246,7 @@
         editor.addButton('grid_unit_shadow', grid_shadow_button('.grid-unit'));
 
         editor.addButton('grid_unit_remove', {
-            tooltip: 'Remove unit',
+            tooltip: 'Remove column',
             icon: 'dashicon dashicons-no',
             onclick: function() {
                 var el = $(editor.selection.getNode()).closest('.grid-unit');
@@ -291,7 +291,7 @@
         });
 
         editor.addButton('grid_add_unit', {
-            tooltip: 'Add unit',
+            tooltip: 'Add column',
             icon: 'dashicon dashicons-plus',
             onclick: function() {
                 var el = $(editor.selection.getNode()).closest('.grid-unit');

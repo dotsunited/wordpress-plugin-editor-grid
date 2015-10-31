@@ -7,10 +7,10 @@
         'Background': 'Фон',
         'Highlight': 'Подсветка',
         'Equalize column heights': 'Выровнять высоту столбца',
-        'Add unit': 'Добавить элемент',
-        'Unit size': 'Размер блока',
+        'Add column': 'Добавить элемент',
+        'Column size': 'Размер блока',
         'Remove grid': 'Удалить сетку',
-        'Remove unit': 'Удалить элемент',
+        'Remove column': 'Удалить элемент',
         'Column %num%': 'Столбец %num%',
         '%size% of %sizes%': '%size% из %sizes%'
     });
