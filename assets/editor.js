@@ -366,7 +366,13 @@
         });
 
         editor.on('wptoolbar', function(e) {
-            var parent = e.element.parentNode;
+            var el = e.element;
+
+            while (el.getAttribute('data-mce-bogus')) {
+                el = el.parentNode;
+            }
+
+            var parent = el.parentNode;
 
             if (editor.dom.hasClass(parent, 'grid-unit')) {
                 e.toolbar = toolbar;
