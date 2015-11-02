@@ -418,6 +418,14 @@
             }
         });
 
+        editor.on('NodeChange', function(event) {
+            var el = $(event.element).closest('.grid');
+
+            if (!el.find('.grid-unit').length) {
+                el.remove();
+            }
+        });
+
         // Allow to place the caret behind a box.
         // This fix will force a paragraph element after the table but only when
         // the forced_root_block setting is enabled.
