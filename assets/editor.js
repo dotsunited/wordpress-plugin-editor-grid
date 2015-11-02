@@ -388,9 +388,8 @@
             // paragraph under it
             if (keyCode === VK.ENTER) {
                 node = selection.getNode();
-                wrap = dom.getParent(node, '.grid-unit');
 
-                if (!wrap) {
+                if (!editor.dom.hasClass(node, 'grid-unit') && !isEmpty(node)) {
                     return;
                 }
 
@@ -399,7 +398,7 @@
                 spacer = tinymce.Env.ie && tinymce.Env.ie < 11 ? '' : '<br data-mce-bogus="1" />';
                 P = dom.create('p', null, spacer);
 
-                dom.add(wrap, P);
+                dom.add(node, P);
 
                 editor.nodeChanged();
                 selection.setCursorLocation(P, 0);
