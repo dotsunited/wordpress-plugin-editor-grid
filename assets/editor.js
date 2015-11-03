@@ -1,4 +1,4 @@
-(function($, tinyMCE) {
+(function($) {
     function isEmpty(el) {
         el = $(el);
         return !el.text() && !el.children().not('br').length;
@@ -366,13 +366,17 @@
         });
 
         editor.on('wptoolbar', function(e) {
-            var el = e.element;
+            var el = e.element, parent;
 
             while (el.getAttribute('data-mce-bogus')) {
                 el = el.parentNode;
             }
 
-            var parent = el.parentNode;
+            parent = el;
+
+            if (!editor.dom.hasClass(parent, 'grid-unit')) {
+                parent = parent.parentNode;
+            }
 
             if (editor.dom.hasClass(parent, 'grid-unit')) {
                 e.toolbar = toolbar;
@@ -474,4 +478,4 @@
             }
         });
     });
-})(jQuery, tinyMCE);
+})(jQuery);
