@@ -94,6 +94,10 @@
     height: auto;
 }
 
+[class*=grid-unit] img.aligncenter {
+    display: block;
+}
+
 [class*=grid-unit]:before {
     font-size: 11px;
     color: #ccc;
