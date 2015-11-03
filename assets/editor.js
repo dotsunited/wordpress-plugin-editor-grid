@@ -1,4 +1,4 @@
-(function($) {
+(function($, tinyMCE) {
     function isEmpty(el) {
         el = $(el);
         return !el.text() && !el.children().not('br').length;
@@ -474,4 +474,4 @@
             }
         });
     });
-})(jQuery);
+})(jQuery, tinyMCE);
