@@ -345,6 +345,28 @@
             icon: 'grid-icon grid-icon-create',
             onclick: function() {
                 grid_create([6, 6]);
+            },
+            onPostRender: function() {
+                var ctrl = this, selector = '.grid';
+
+                function bindStateListener() {
+                    ctrl.disabled(
+                        !!editor.dom.getParent(
+                            editor.selection.getStart(),
+                            selector
+                        )
+                    );
+
+                    editor.selection.selectorChanged(selector, function(state) {
+                        ctrl.disabled(!!state);
+                    });
+                }
+
+                if (editor.initialized) {
+                    bindStateListener();
+                } else {
+                    editor.on('init', bindStateListener);
+                }
             }
         });
 
