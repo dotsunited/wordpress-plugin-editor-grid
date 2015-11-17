@@ -93,7 +93,7 @@
     height: auto;
 }
 
-[class*=grid-unit] img.aligncenter {
+[class*=grid-unit] .aligncenter {
     display: block;
 }
 
