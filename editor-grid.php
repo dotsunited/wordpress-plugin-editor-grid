@@ -33,14 +33,11 @@ add_filter('mce_buttons_3', function ($buttons, $editor_id) {
         return $buttons;
     }
 
-    if (!in_array($editor_id, $editor_ids)) {
+    if (!in_array($editor_id, $editor_ids, true)) {
         return $buttons;
     }
 
-    array_push(
-        $buttons,
-        'grid_create'
-    );
+    $buttons[] = 'grid_create';
 
     return $buttons;
 }, 1, 2);
