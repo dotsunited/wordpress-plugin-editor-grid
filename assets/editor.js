@@ -158,7 +158,7 @@
         function editor_grid_shadow_button(selector) {
             return {
                 tooltip: 'Shadow',
-                icon: 'editor-grid-icon editor-grid-icon-shadow',
+                icon: 'dotsunited-editor-grid-icon dotsunited-editor-grid-icon-shadow',
                 onclick: function() {
                     var el = $(editor.selection.getNode()).closest(selector);
 
@@ -314,7 +314,7 @@
 
         editor.addButton('editor_grid_create', {
             title: 'Create grid',
-            icon: 'editor-grid-icon editor-grid-icon-create',
+            icon: 'dotsunited-editor-grid-icon dotsunited-editor-grid-icon-create',
             onclick: function() {
                 editor_grid_create([6, 6]);
             },
