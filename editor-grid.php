@@ -2,7 +2,7 @@
 /*
 Plugin Name: Dots United WordPress Editor Grid Plugin
 Plugin URI: https://github.com/dotsunited/wordpress-plugin-editor-grid
-Description: Editor extension to create and manage grids.
+Description: WordPress editor extension to create and manage grids.
 License: MIT
 Author: Dots United GmbH
 Version: 2.0.0
