@@ -21,7 +21,7 @@ add_filter('mce_external_plugins', function ($plugins) use ($baseUrl) {
     }
 
     /* WP 3.9 with tinyMCE 4 */
-    $plugins['editor_grid'] = $baseUrl . 'assets/editor.js?ver=' . urlencode(md5_file(__DIR__ . '/assets/editor.js'));
+    $plugins['dotsunited_editor_grid'] = $baseUrl . 'assets/editor.js?ver=' . urlencode(md5_file(__DIR__ . '/assets/editor.js'));
 
     return $plugins;
 });
@@ -37,7 +37,7 @@ add_filter('mce_buttons_3', function ($buttons, $editor_id) {
         return $buttons;
     }
 
-    $buttons[] = 'editor_grid_create';
+    $buttons[] = 'dotsunited_editor_grid_create';
 
     return $buttons;
 }, 1, 2);
