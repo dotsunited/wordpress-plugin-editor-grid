@@ -20,7 +20,7 @@ The incorporation into a [Webpack](https://github.com/webpack/webpack) workflow
 with LESS is encouraged.
 
 You can find an example boilerplate for possible frontend styles
-[here](https://github.com/dotsunited/wordpress-boilerplate/blob/master/assets/main/grid/style.less),
+[here](https://github.com/dotsunited/wordpress-boilerplate/blob/master/assets/main/editor-grid/style.less),
 and for a possible WordPress-Webpack setup
 [here](https://github.com/dotsunited/wordpress-boilerplate/blob/master/webpack.config.js).
 
