@@ -27,7 +27,7 @@ add_filter('mce_external_plugins', function ($plugins) use ($baseUrl) {
 });
 
 add_filter('mce_buttons_3', function ($buttons, $editor_id) {
-    $editor_ids = apply_filters('wordpress_editor_grid_editor_ids', array('content'));
+    $editor_ids = apply_filters('dotsunited_editor_grid_editor_ids', array('content'));
 
     if (!is_array($editor_ids)) {
         return $buttons;
@@ -44,7 +44,7 @@ add_filter('mce_buttons_3', function ($buttons, $editor_id) {
 
 add_filter('mce_css', function ($mce_css) use ($baseUrl) {
     $file = apply_filters(
-        'wordpress_editor_grid_editor_css',
+        'dotsunited_editor_grid_editor_css',
         $baseUrl . 'assets/editor.css?ver=' . urlencode(md5_file(__DIR__ . '/assets/editor.css'))
     );
 
@@ -59,7 +59,7 @@ add_action('admin_enqueue_scripts', function () use ($baseUrl) {
     wp_enqueue_script('jquery');
 
     wp_enqueue_style(
-        'wordpress_editor_grid_editor_buttons',
+        'dotsunited_editor_grid_editor_buttons',
         $baseUrl . 'assets/buttons.css',
         array(),
         md5_file(__DIR__ . '/assets/buttons.css')
