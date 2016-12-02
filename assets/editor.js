@@ -312,34 +312,6 @@
 
         editor.addButton('editor_grid_shadow', editor_grid_shadow_button('.editor-grid'));
 
-        editor.addButton('editor_grid_equal_height', {
-            tooltip: 'Equalize column heights',
-            icon: 'editor-grid-icon editor-grid-icon-equalize-height',
-            onclick: function() {
-                var el = $(editor.selection.getNode()).closest('.editor-grid');
-
-                if (!el.length) {
-                    return;
-                }
-
-                el.toggleClass('editor-grid-equal-height');
-                this.active(el.hasClass('editor-grid-equal-height'));
-            },
-            onPostRender: function() {
-                var self = this;
-
-                editor.on('NodeChange', function(event) {
-                    var el = $(event.element).closest('.editor-grid');
-
-                    if (!el.length) {
-                        return;
-                    }
-
-                    self.active(el.hasClass('editor-grid-equal-height'));
-                });
-            }
-        });
-
         editor.addButton('editor_grid_create', {
             title: 'Create grid',
             icon: 'editor-grid-icon editor-grid-icon-create',
@@ -382,7 +354,6 @@
                 '|',
                 'editor_grid_style',
                 'editor_grid_shadow',
-                'editor_grid_equal_height',
                 'editor_grid_remove'
             ], true);
         });
