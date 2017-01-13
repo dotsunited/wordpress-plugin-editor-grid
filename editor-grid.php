@@ -5,7 +5,7 @@ Plugin URI: https://github.com/dotsunited/wordpress-plugin-editor-grid
 Description: Editor extension to create and manage grids.
 License: MIT
 Author: Dots United GmbH
-Version: 1.0.0
+Version: 1.0.1
 Author URI: https://dotsunited.de
 */
 
