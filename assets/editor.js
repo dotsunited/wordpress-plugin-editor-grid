@@ -359,23 +359,21 @@
         });
 
         editor.on('wptoolbar', function(e) {
-            var el = e.element, parent;
+            var el = e.element;
 
-            while (el.getAttribute('data-mce-bogus')) {
-                el = el.parentNode;
+            // Do not overwrite existing toolbars/selections
+            if (e.toolbar || e.selection) {
+                return;
             }
 
-            parent = el;
+            var unit = $(el).closest('.editor-grid-unit');
 
-            if (!editor.dom.hasClass(parent, 'editor-grid-unit')) {
-                parent = parent.parentNode;
+            if (!unit.length) {
+                return;
             }
 
-            if (editor.dom.hasClass(parent, 'editor-grid-unit')) {
-                e.toolbar = toolbar;
-                //e.selection = editor.dom.getParent(parent, '.editor-grid');
-                e.selection = parent;
-            }
+            e.toolbar = toolbar;
+            e.selection = unit.get(0);
         });
 
         // When pressing ENTER inside a unit, move the cursor to a new parapraph
