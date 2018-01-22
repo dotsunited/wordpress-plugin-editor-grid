@@ -1,5 +1,5 @@
 {
-    "name": "dotsunited/wordpress-plugin-editor-grid",
+    "name": "dotsunited-wordpress-plugin/editor-grid",
     "type": "wordpress-plugin",
     "description": "WordPress editor extension to create and manage grids.",
     "keywords": ["wordpress", "plugin", "editor", "grid"],
