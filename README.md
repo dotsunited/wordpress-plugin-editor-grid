@@ -56,5 +56,5 @@ add_filter('dotsunited_editor_grid_editor_ids', function($editor_ids) {
 License
 ---
 
-Copyright (c) 2015-2017 Dots United GmbH.
-Released under the [MIT](LICENSE?raw=1) license.
+Copyright (c) 2015-2018 Dots United GmbH.
+Released under the [MIT](LICENSE) license.
