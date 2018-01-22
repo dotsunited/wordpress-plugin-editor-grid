@@ -9,7 +9,7 @@ Installation
 Install with
 
 ```bash
-composer require dotsunited/wordpress-plugin-editor-grid
+composer require dotsunited-wordpress-plugin/editor-grid
 ```
 
 Note: This plugin does not automatically add the required styles to the frontend
